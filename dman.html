@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="dman.js"></script>
+    <script>
+        (function() {
+            var $appendedText = $.create('p', 'appended text');
+
+            console.info('$', $);
+            console.info('Selector', $('body'));
+            console.info('Bad Selector', $('bad'));
+            console.info('Append to body', $('body').append($appendedText));
+            console.info('Create', $.create('span'));
+            console.info('Create with attrs', $.create('span', false, { id: 'foo', class: ['bar', 'baz'], ['data-title']: 'norf' }));
+        })();
+    </script>
+
+</body>
+</html>
